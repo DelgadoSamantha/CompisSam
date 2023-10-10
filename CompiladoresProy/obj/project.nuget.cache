@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vj9JeUNQ0cg84kDqPdqlzsygvdrfuhWmTJ3NPQ2uYCpwvV4Gxtqul52JDmpYwExvYRSswc4AWlXZRm6OF7xt/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\itzia\\OneDrive\\Imágenes\\CompiladoresProy\\CompiladoresProy\\CompiladoresProy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\itzia\\.nuget\\packages\\avalonedit\\6.3.0.90\\avalonedit.6.3.0.90.nupkg.sha512",
+    "C:\\Users\\itzia\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
