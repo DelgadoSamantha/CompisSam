@@ -100,7 +100,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Button Grid.Column="0" Background="Purple" Content="Léxico" BorderBrush="#461c50" BorderThickness="0 0 3 3" Foreground="white" Click="LexicoCodigo" FontFamily="Consolas"></Button>
-                    <Button Grid.Column="1" Background="Purple" Content="Sintactico" BorderBrush="#461c50" BorderThickness="0 0 3 3" Foreground="white" FontFamily="Consolas"></Button>
+                    <Button Grid.Column="1" Background="Purple" Content="Sintactico" BorderBrush="#461c50" BorderThickness="0 0 3 3" Foreground="white" Click="eventoSintactico" FontFamily="Consolas"></Button>
                     <Button Grid.Column="2" Background="Purple" Content="Semantico" BorderBrush="#461c50" BorderThickness="0 0 3 3" Foreground="white" FontFamily="Consolas"></Button>
                     <Button Grid.Column="3" Background="Purple" Content="Codigo Intermedio" BorderBrush="#461c50" BorderThickness="0 0 3 3" Foreground="white" FontFamily="Consolas"></Button>
 

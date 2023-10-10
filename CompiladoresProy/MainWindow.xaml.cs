@@ -71,6 +71,7 @@ namespace CompiladoresProy
         OpenFileDialog openFileDialog, filePath;
         SaveFileDialog saveFileDialog, saveSalida;
         string archAnalizarLex;
+        private bool compilado = false;
 
         //Style avalonstyles;
         public int linea { get; set; }
@@ -207,6 +208,14 @@ namespace CompiladoresProy
             process.WaitForExit();
             this.codigofinal.Text = output;
         }
+
+        private void eventoSintactico(object sender, RoutedEventArgs e)
+        {
+            this.frame.Navigate(new System.Uri("./Sintactico/ArbolSintactico.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+
+
 
         private void Compi(object sender, RoutedEventArgs e)
         {
