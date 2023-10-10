@@ -13,36 +13,12 @@ indice=0
 tkstrg=''
 raiz=Tree('PROGRAMA',[])
 token=-1
-source = open('C:\\Users\\itzia\\OneDrive\\Escritorio\\archToken.txt','r')
+source = open('archToken.txt','r')
 lineno=0
 colpos=0
 
-""" def getTokenSintactico():
-    global source
-    global lineno
-    global colpos
-    linea = source.readline()
-    global tokenString
-    if  linea:
-        elementos = linea.split('\t')
-        elementos = [elemento.replace("\n", "") for elemento in elementos]
-        lts = []
-        aux = elementos[0]
-        if len(elementos)>=2:
-            tokenString = elementos[1]
-            lineno = elementos[2]
-            colpos = elementos[3]
-        if(elementos[0] == 'RESERVED-WORD'):
-           aux = TokenType[elementos[1].upper()].value 
-        else:
-            aux = TokenType[aux.upper()].value 
-        return aux   
-    else:
-        return TokenType.ENDFILE.value  
- """
-
 def obtener_siguiente_linea():
-    with open('C:\\Users\\itzia\\OneDrive\\Escritorio\\archToken.txt', "r") as archivo:
+    with open('archToken.txt', "r") as archivo:
         lineas = archivo.readlines()
         obtener_siguiente_linea.indice += 1  # Variable estática para rastrear el índice
  

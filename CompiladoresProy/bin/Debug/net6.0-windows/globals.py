@@ -1,12 +1,14 @@
+from ctypes import Union
 from enum import Enum
 
 
-MAXRESERVED = 8
+MAXRESERVED = 14
 FALSE = 0
 TRUE = 1
 linepos = 0
 lineno = 0
 EchoSource = None
+MAXCHILDREN=3
 
 class TokenType(Enum):
     ENDFILE=1
@@ -56,3 +58,67 @@ class TokenType(Enum):
 
 
     
+class NodoKind(Enum):
+    STKD=1
+    EXPD=2
+    DEKD=3
+
+
+class SentenciaKind(Enum):
+    IFKD=1
+    WHILEKD=2
+    DOKD=3
+    UNTILKD=4
+    CINKD=5
+    COUTKD=6
+    ASIGKD=7
+    ASIGPREKD=8
+    ASIGPOSTKD=9
+    MAINKD=10
+    DECKD=11
+    TYPEDEFIKD=12
+    LISTAIDKD=13
+    ELSEKD=14
+
+class ExpresionKind(Enum):
+    OPERKD=1
+    CONSTKD=2
+    CONSTFKD=3
+    IDKD=3
+
+class DeclaracionKind(Enum):
+    INTKD=1
+    REALKD=2
+    BOOLEANKD=3
+    VOIDKD=4
+
+class TreeNode:
+    def __init__(self,lineno,nodoKind,kind) -> None:
+        self.child:list = [None]*MAXCHILDREN
+        self.sibling:TreeNode = None
+        self.lineno:int = lineno
+        self.nodeKind:NodoKind = nodoKind
+        self.kind:Union[SentenciaKind, ExpresionKind] = kind
+        self.attr:Union[TokenType,int,float,str] = ""
+        self.type:DeclaracionKind = -1
+
+    def getChild(self,pos)->list:
+        return self.child[pos]
+    def setChild(self,child,pos)->None:
+        self.child.insert(pos,child) 
+    def getSibling(self):
+        return self.sibling
+    def setSibling(self,sibling)->None:
+        self.sibling=sibling
+    def getType(self)->DeclaracionKind:
+        return self.type
+    def setType(self,type:DeclaracionKind)->None:
+        self.type=type
+    def getAttr(self):
+        return self.attr
+    def setAttr(self,attr)->None:
+        self.attr=attr
+    def getNodeKind(self)->NodoKind:
+        return self.nodeKind
+    def getKind(self):
+        return self.kind
