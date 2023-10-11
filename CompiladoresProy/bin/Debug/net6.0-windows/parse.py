@@ -948,7 +948,7 @@ def recuperacion():
         
 
 
-def sintaxError(message):
+def sinError(message):
    global palabras
    #print("\n>>> Syntax error at line {}: {}".format(palabras[2], message))
 

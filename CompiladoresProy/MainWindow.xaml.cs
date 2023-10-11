@@ -211,6 +211,9 @@ namespace CompiladoresProy
 
         private void eventoSintactico(object sender, RoutedEventArgs e)
         {
+            string errores = "";
+            errores += File.ReadAllText(Directory.GetCurrentDirectory() + "\\archErrorSintactico.txt");
+            this.textoerr.Text = errores;
             this.frame.Navigate(new System.Uri("./Sintactico/ArbolSintactico.xaml", UriKind.RelativeOrAbsolute));
         }
 

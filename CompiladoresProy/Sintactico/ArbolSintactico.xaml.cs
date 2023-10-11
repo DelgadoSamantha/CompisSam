@@ -27,32 +27,32 @@ namespace CompiladoresProy.Sintactico
 
     enum NodoKind { 
     STKD=1, 
-    EXPD
+    EXPD=2
     }
     enum SentenciaKind {
     IFKD = 1,
-    WHILEKD,
-    DOKD,
-    UNTILKD,
-    CINKD,
-    COUTKD,
-    ASIGKD,
-    MAINKD,
-    DECKD,
-    TYPEDEFIKD,
-    ELSEKD
+    WHILEKD=2,
+    DOKD=3,
+    UNTILKD=4,
+    CINKD=5,
+    COUTKD=6,
+    ASIGKD=7,
+    MAINKD=10,
+    DECKD=11,
+    TYPEDEFIKD=12,
+    ELSEKD=14
     }
     enum ExpresionKind {
     OPERKD = 1,
-    CONSTKD,
-    CONSTFKD,
-    IDKD
+    CONSTKD=2,
+    CONSTFKD=3,
+    IDKD=4
     }
     enum DeclaracionKind {
     INTKD = 1,
-    REALKD,
-    BOOLEANKD,
-    VOIDKD
+    REALKD = 2,
+    BOOLEANKD=3,
+    VOIDKD=4
     }
 
     public class NodoArbol

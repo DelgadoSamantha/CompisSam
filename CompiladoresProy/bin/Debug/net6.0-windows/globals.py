@@ -11,44 +11,44 @@ EchoSource = None
 MAXCHILDREN=3
 
 class TokenType(Enum):
-    ENDFILE=1
-    ERROR=2
+    ENDFILE=0
+    ERROR=1
 
-    IF=3
-    THEN=4
-    ELSE=5
-    END=6
-    REPEAT=7
-    UNTIL=8
-    MAIN=9
-    DO=10
-    WHILE=11
-    CIN=12
-    COUT=13
-    BOOLEAN=14
-    INT=15
-    REAL=16
+    IF=2
+    THEN=3
+    ELSE=4
+    END=5
+    REPEAT=6
+    UNTIL=7
+    MAIN=8
+    DO=9
+    WHILE=10
+    CIN=11
+    COUT=12
+    BOOLEAN=13
+    INT=14
+    REAL=15
     
-    ID=17
-    NREAL=18
-    ENTERO=19
+    ID=16
+    NREAL=17
+    ENTERO=18
     
-    SUMA=20
-    RESTA=21
-    MULTI=22
-    DIV=23
-    RES=24
-    MENOR=25
-    MENOREQ=26
-    MAYOR=27
+    SUMA=19
+    RESTA=20
+    MULTI=21
+    DIV=22
+    RES=23
+    MENOR=24
+    MENOREQ=25
+    MAYOR=26
     MAYOREQ=27
     IGUALDAD=28
     DIFERENTEDE=29
     ASIGNACION=30
     PARENIZQ=31
     PARENDERE=32
-    LLAVEIZQ=33
-    LLAVEDER=34
+    LLAVEDER=33
+    LLAVEIZQ=34 
     PLUSPLUS=35
     MENOSMENOS=36
     COMA=37
@@ -84,7 +84,7 @@ class ExpresionKind(Enum):
     OPERKD=1
     CONSTKD=2
     CONSTFKD=3
-    IDKD=3
+    IDKD=4
 
 class DeclaracionKind(Enum):
     INTKD=1
